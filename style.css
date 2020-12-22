@@ -1,0 +1,234 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bgColor: hsl(0, 100%, 74%) ;
+  --borderColor: hsl(246, 25%, 77%);
+  --headFormColor: hsl(248, 32%, 49%);
+  --inputColor: hsl(249, 10%, 26%);
+  --buttonColor: hsl(154, 59%, 51%);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  position: relative;
+}
+
+.bg {
+  background-color: var(--bgColor);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.bg img {
+  width: 100%;
+}
+
+.Sign-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.Sign-up .container {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Sign-up .container .left-side {
+  width: 50%;
+}
+.Sign-up .container .left-side h2 {
+  color: white;
+  margin-bottom: 35px;
+  font-size: 3em;
+}
+.Sign-up .container .left-side p {
+  color: white;
+  font-size: 1em;
+}
+.Sign-up .container .right-side {
+  width: 50%;
+}
+.Sign-up .container .right-side .head-form {
+  background-color: var(--headFormColor);
+  padding: 15px;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  box-shadow: 1px 6px 1px 1px rgba(0, 0, 0, 0.251);
+}
+.Sign-up .container .right-side .head-form .d {
+  font-weight: 600;
+}
+.Sign-up .container .right-side .head-form .c {
+  font-weight: 400;
+  font-size: 0.9em;
+}
+.Sign-up .container .right-side form {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 41px;
+  border-radius: 10px;
+}
+.Sign-up .container .right-side form div {
+  position: relative;
+  margin-bottom: 15px;
+}
+.Sign-up .container .right-side form div div {
+  position: relative;
+}
+.Sign-up .container .right-side form div div .text-input {
+  width: 100%;
+  padding: 15px;
+  outline: none;
+  border: 1px solid var(--borderColor);
+  color: var(--inputColor);
+  border-radius: 5px;
+  font-weight: 700;
+}
+.Sign-up .container .right-side form div div .text-input:focus {
+  transition: all 0.3s;
+  border-color: black;
+}
+.Sign-up .container .right-side form div div img {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  z-index: 11;
+  transform: translateY(-50%);
+  display: none;
+}
+.Sign-up .container .right-side form div .error {
+  display: none;
+  font-size: 0.55em;
+  color: var(--bgColor);
+  font-weight: 600;
+  padding: 3px;
+  text-align: right;
+  margin-bottom: 0;
+}
+.Sign-up .container .right-side form .submit-input {
+  padding: 17px;
+  color: white;
+  background-color: var(--buttonColor);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  text-transform: uppercase;
+  margin-bottom: 17px;
+  cursor: pointer;
+}
+.Sign-up .container .right-side form .submit-input:hover {
+  transition: all 0.3s;
+  background-color: #61d6a3;
+}
+.Sign-up .container .right-side form .foot-form {
+  font-size: 0.75em;
+  text-align: center;
+  font-weight: 500;
+}
+.Sign-up .container .right-side form .foot-form .a {
+  color: var(--borderColor);
+}
+.Sign-up .container .right-side form .foot-form .b {
+  color: var(--bgColor);
+}
+
+@media screen and (min-width: 990px) {
+  .bg-desktop {
+    display: block;
+  }
+
+  .bg-mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .Sign-up .container {
+    width: 92%;
+  }
+}
+@media screen and (max-width: 990px) {
+  .Sign-up {
+    padding-bottom: 70px;
+  }
+
+  form {
+    padding: 25.5px !important;
+  }
+
+  .head-form {
+    padding: 13px 58px !important;
+  }
+
+  .container {
+    flex-direction: column;
+    min-width: 88%;
+  }
+
+  .bg-desktop {
+    display: none;
+  }
+
+  .bg-mobile {
+    display: block;
+  }
+
+  body {
+    min-height: fit-content;
+  }
+
+  .left-side {
+    padding-top: 100px;
+    min-width: 100%;
+    text-align: center;
+  }
+  .left-side h2 {
+    font-size: 1.8em !important;
+    margin-bottom: 15px !important;
+  }
+  .left-side p {
+    font-size: 0.95em !important;
+    margin-bottom: 45px !important;
+    padding: 5px;
+  }
+
+  .right-side {
+    min-width: 100%;
+  }
+}
+@media screen and (max-height: 500px) {
+  .container {
+    flex-direction: column-reverse !important;
+  }
+}
+@media screen and (max-height: 500px) {
+  .container {
+    flex-direction: column-reverse !important;
+    padding: 10px;
+  }
+
+  .head-form {
+    display: none;
+  }
+}
+@media screen and (min-height: 500px) {
+  .head-form {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
